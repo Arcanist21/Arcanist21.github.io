@@ -1,3 +1,464 @@
-body {
-  background-color: #ecfbe6;
+/*GENEROWANE Copilot + GPT START*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap");
+
+:root {
+    --color-paper: #EDEBDD;
+    --color-ink: #1b1717;
+    --color-red: #630000;
+    --color-red-bright: #810100;
+    --content-width: 1240px;
+    --content-shadow: 12px 12px 0 var(--color-ink);
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+::selection {
+    background: var(--color-red-bright);
+    color: var(--color-paper);
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.12;
+    text-wrap: balance;
+    color: var(--color-red);
+}
+
+.naglowek h1,
+.misja h2 {
+    color: var(--color-paper);
+}
+
+h2 {
+    font-size: 3.8rem;
+    letter-spacing: -0.045em;
+}
+
+h3 {
+    font-size: 2.2rem;
+    letter-spacing: -0.025em;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--color-red-bright);
+    outline-offset: 6px;
+}
+
+.naglowek {
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+    background: linear-gradient(to left, #1B2433, #C6953F);
+    color: var(--color-paper);
+    border-bottom: 12px solid var(--color-red-bright);
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    width: 220px;
+    aspect-ratio: 1;
+    padding: 32px;
+    background: var(--color-paper);
+    border: 2px solid var(--color-ink);
+    border-radius: 50%;
+    box-shadow: var(--content-shadow);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Specials */
+.specialy,
+.misja,
+.o_nas,
+body > .nas_podpunkt {
+    width: 90%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+.specialy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 0 64px;
+    padding-block: 100px;
+}
+
+.specialy > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    color: var(--color-red);
+    border-bottom: 2px solid var(--color-red);
+}
+
+.specjal {
+    display: flex;
+    align-items: center;
+    padding-block: 34px;
+    font-size: 1.05rem;
+}
+
+.specialy > div:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 48px;
+}
+
+.specialy > div:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 48px;
+}
+
+.specialy > div:nth-of-type(2),
+.specialy > div:nth-of-type(4) {
+    min-width: 0;
+}
+
+.specjal_zdj {
+    height: 100%;
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 120px 8px 8px 8px;
+    border: 2px solid #630000;
+    box-shadow: 10px 10px 0 #630000;
+}
+
+.specialy > div:nth-of-type(4) .specjal_zdj {
+    border-radius: 8px 8px 120px 8px;
+}
+
+.specjal_zdj img {
+    transition: transform 350ms ease;
+}
+
+.specjal_zdj:hover img {
+    transform: scale(1.035);
+}
+
+/* Mission */
+.misja {
+    padding: 64px;
+    background: linear-gradient(to right, #620A1A, #A31E21);
+    color: var(--color-paper);
+    border-radius: 8px;
+    box-shadow: var(--content-shadow);
+}
+
+.misja > h2 {
+    max-width: 820px;
+    margin-bottom: 48px;
+}
+
+.misja ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: decimal;
+}
+
+.misja li {
+    min-width: 0;
+    padding-top: 24px;
+    border-top: 2px solid var(--color-paper);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.misja li p {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.o_nas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 64px;
+    padding: 10px;
+    width: calc(90% - 24px);
+    margin: 32px auto 0;
+    border: 2px solid var(--color-red);
+    border-radius: 8px;
+    box-shadow: 8px 8px 0 var(--color-ink);
+}
+
+.o_nas > * {
+    min-width: 0;
+}
+
+.o_nas > h2 {
+    color: var(--color-red);
+}
+
+.o_nas > .nas_podpunkt,
+body > .nas_podpunkt {
+    padding: 28px;
+    border: 2px solid var(--color-red);
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.o_nas > .nas_podpunkt h3,
+body > .nas_podpunkt h3 {
+    color: var(--color-red);
+}
+
+.o_nas > .nas_podpunkt p,
+body > .nas_podpunkt p {
+    min-width: 0;
+}
+
+body > .nas_podpunkt {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 64px;
+    padding-block: 40px;
+    width: calc(90% - 24px);
+    margin-inline: auto;
+}
+
+body > .nas_podpunkt:last-of-type {
+    margin-bottom: 60px;
+}
+
+.s-footer {
+    margin-top: 60px;
+    padding: 44px 32px;
+    background:
+        linear-gradient(rgba(27, 27, 27, 0.2), rgba(27, 27, 27, 0.2)),
+        url("assets/anilsharma26-food-6950997.jpg") center / cover;
+    color: var(--color-paper);
+    border-top: 8px solid var(--color-red-bright);
+}
+
+.s-footer footer {
+    width: var(--content-width);
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.s-footer nav p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.s-footer a {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #EDEBDD;
+    transition: border-color 200ms ease;
+}
+
+.s-footer a:hover {
+    border-bottom-color: #810100;
+}
+
+.s-footer a:focus-visible {
+    outline-color: #EDEBDD;
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .naglowek {
+        gap: 32px;
+        min-height: 360px;
+        padding-block: 64px;
+    }
+
+    .logo {
+        width: 160px;
+        padding: 24px;
+        box-shadow: 8px 8px 0 #1b1717;
+    }
+
+    .specialy {
+        gap: 0 36px;
+        padding-block: 72px;
+    }
+
+    .specjal_zdj {
+        min-height: 360px;
+    }
+
+    .misja {
+        padding: 40px;
+    }
+
+    .o_nas,
+    body > .nas_podpunkt {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        column-gap: 36px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        font-size: 15px;
+    }
+
+    .naglowek {
+        gap: 32px;
+        padding: 48px 24px 76px;
+    }
+
+    .logo {
+        width: 120px;
+        padding: 18px;
+    }
+
+    .specialy,
+    .misja,
+    .o_nas,
+    body > .nas_podpunkt {
+        width: 90%;
+    }
+
+    .specialy {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-block: 56px;
+    }
+
+    .specialy > h2 {
+        margin-bottom: 0;
+    }
+
+    .specialy > div:nth-of-type(3),
+    .specialy > div:nth-of-type(4) {
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0;
+    }
+
+    .specialy > div:nth-of-type(3) {
+        margin-top: 24px;
+    }
+
+    .specjal {
+        padding-block: 0;
+        font-size: 1rem;
+    }
+
+    .specjal_zdj {
+        height: 320px;
+        min-height: 0;
+        border-radius: 72px 8px 8px 8px;
+        box-shadow: 6px 6px 0 var(--color-red);
+    }
+
+    .specialy > div:nth-of-type(4) .specjal_zdj {
+        border-radius: 8px 8px 72px 8px;
+    }
+
+    .misja {
+        padding: 32px 24px;
+        box-shadow: 6px 6px 0 var(--color-ink);
+    }
+
+    .misja > h2 {
+        margin-bottom: 32px;
+    }
+
+    .misja ul {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .o_nas,
+    body > .nas_podpunkt {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .o_nas {
+        padding: 64px 10px 32px;
+        width: calc(90% - 24px);
+        margin-top: 24px;
+    }
+
+    .o_nas > .nas_podpunkt,
+    body > .nas_podpunkt {
+        padding: 24px;
+    }
+
+    body > .nas_podpunkt {
+        padding-block: 32px;
+    }
+
+    .s-footer {
+        margin-top: 32px;
+        padding: 32px 20px;
+    }
+
+    .naglowek h1 {
+        font-size: 3.3rem;
+    }
+}
+/*GENEROWANE AI STOP*/

@@ -1,4 +1,2 @@
 .idea
-*.odt
-*.pdf
-*.odt#
+/utility/
