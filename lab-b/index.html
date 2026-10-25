@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imie Nazwisko (00000) - AI LAB B</title>
+    <title>Bartłomiej Mazur (55673) - AI LAB B</title>
 
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+<div class="calosc">
+<div class="naglowek">
+<h1>Niesamowita lista tasków</h1>
+</div>
 
+<div class="szukaj">
+    <label for="szukaj">Szukaj taska</label>
+    <input
+        type="text"
+        id="szukaj"
+        name="szukaj taska"
+    >
+</div>
+
+<div class="lista_taskow">
+    <ul>
+
+    </ul>
+</div>
+    <!-- claude zaproponował form dla łatwiejszej walidacji-->
+    <form class="panel_dodania">
+        <label>Nazwa zadania
+        <input type="text" name="nazwa-zadania"
+               minlength="3" maxlength="255" required>
+        </label>
+        <label >Data zadania
+        <input type="date" name="data-zadania">
+        </label>
+
+        <button type="submit" class="add_button">Zapisz</button>
+    </form>
+</div>
 </body>
 </html>
