@@ -1,3 +1,90 @@
+/*style współtworzone z claude*/
+
+/* układ strony: granatowy gradient, mapa po lewej, puzzle po prawej */
 body {
-  background-color: #e6f1fc;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #050d24 0%, #0b1f4d 50%, #14337a 100%) fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  --piece-w: calc(44vw / var(--cols, 2));
+}
+
+/* mapa i canvas z jej rastrem */
+#maps {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+#map {
+  width: 88%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  border: 1px solid black;
+}
+
+#rasterMap {
+  width: 88%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+#coords {
+  color: white;
+}
+
+/* puzzle */
+.puzzle-grid {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-columns: repeat(var(--cols), max-content);
+  gap: 3px;
+}
+
+#puzzle {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#pieces {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+}
+
+.puzzle-cell {
+  aspect-ratio: var(--piece-ratio);
+  border: 2px dashed #7f7fe9;
+}
+
+#puzzle > div {
+  width: var(--piece-w);
+  box-sizing: border-box;
+}
+
+#pieces canvas {
+  width: var(--piece-w);
+  height: auto;
+  display: block;
+}
+
+#puzzle canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* stany przeciągania */
+.puzzle-cell.drag-over,
+.drag-over {
+  border: 2px solid #7FE9D9;
+}
+
+.dragged-item {
+  border: 5px dashed #D8D8FF;
 }
